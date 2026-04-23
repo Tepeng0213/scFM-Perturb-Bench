@@ -83,8 +83,9 @@
    * **Result**: Clusters exhibit strong specificity. For instance, specific clusters show clear erythroid marker genes (e.g., *HBA1*, *HBB*), proving the model successfully identified transcriptomic signatures of cells differentiating into specific lineages under perturbations (e.g., KLF1 KO).
 
    \[\!\[View full image\](results/figures/rank\_genes\_groups\_leiden\_marker\_rankings\_final.png)\](results/figures/rank\_genes\_groups\_leiden\_marker\_rankings\_final.png)
+   [![View full image](scFM-Perturb-Bench/results/figures/rank_genes_groups_leiden_marker_rankings_final.png)](scFM-Perturb-Bench/results/figures/rank_genes_groups_leiden_marker_rankings_final.png)
 
-2. **Standardized Marker Gene Heatmap**
+3. **Standardized Marker Gene Heatmap**
 
    * **Analysis**: Extracts the top 3 marker genes for each cluster for cross-cell expression display. The dendrogram at the top reflects similarities between cell populations.
 
@@ -92,7 +93,7 @@
 
    \[\!\[View full image\](results/figures/Step5.3\_final\_marker\_heatmap\_standard.png)\](results/figures/Step5.3\_final\_marker\_heatmap\_standard.png)
 
-3. **EZH2 (SET) Expression Audit Plot**
+4. **EZH2 (SET) Expression Audit Plot**
 
    * **Analysis**: A critical technical QC step. Compares EZH2 expression abundance between the Control group and the perturbation group labeled "SET."
 
@@ -100,7 +101,7 @@
 
    \[\!\[View full image\](results/figures/step5.1\_publication\_audit\_ezh2.png)\](results/figures/step5.1\_publication\_audit\_ezh2.png)
 
-4. **Experimental Perturbation Sample Distribution Plot**
+5. **Experimental Perturbation Sample Distribution Plot**
 
    * **Analysis**: This bar chart displays the top 30 perturbation groups by cell count.
 
