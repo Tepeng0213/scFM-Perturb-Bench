@@ -52,7 +52,7 @@
 
     * **Cell Viability Audit**: pct\_counts\_mt (mitochondrial gene ratio) is extremely low (near 0%), proving high sample preparation quality with minimal damaged or dead cells.
 
-  \[\!\[View full image\](results/figures/Step3\_qc\_metrics\_violin.png)\](results/figures/Step3\_qc\_metrics\_violin.png)
+  \[\!\[View full image\](scFM-Perturb-Bench/results/figures/Step3\_qc\_metrics\_violin.png)\](scFM-Perturb-Bench/results/figures/Step3\_qc\_metrics\_violin.png)
 
 * **Conclusion**: Data passed rigorous QC filtering (retaining high-count, low-mitochondrial cells), providing a robust foundation for In Silico simulation from Step 5 onwards.
 
