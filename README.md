@@ -52,11 +52,11 @@
 
     * **Cell Viability Audit**: pct\_counts\_mt (mitochondrial gene ratio) is extremely low (near 0%), proving high sample preparation quality with minimal damaged or dead cells.
 
-  \[\!\[View full image\](scFM-Perturb-Bench/results/figures/Step3\_qc\_metrics\_violin.png)\](scFM-Perturb-Bench/results/figures/Step3\_qc\_metrics\_violin.png)
 
 * **Conclusion**: Data passed rigorous QC filtering (retaining high-count, low-mitochondrial cells), providing a robust foundation for In Silico simulation from Step 5 onwards.
 
 * **Key Output**: Cleaned AnnData object ready for tokenization.
+  [![View full image](results/figures/Step3_qc_metrics_violin.png)](results/figures/Step3_qc_metrics_violin.png)
 
 #### **Steps 4-5: Metadata Audit, Perturbation Extraction & Biological Annotation**
 
@@ -82,32 +82,31 @@
 
    * **Result**: Clusters exhibit strong specificity. For instance, specific clusters show clear erythroid marker genes (e.g., *HBA1*, *HBB*), proving the model successfully identified transcriptomic signatures of cells differentiating into specific lineages under perturbations (e.g., KLF1 KO).
 
-   \[\!\[View full image\](results/figures/rank\_genes\_groups\_leiden\_marker\_rankings\_final.png)\](results/figures/rank\_genes\_groups\_leiden\_marker\_rankings\_final.png)
    [![View full image](scFM-Perturb-Bench/results/figures/rank_genes_groups_leiden_marker_rankings_final.png)](scFM-Perturb-Bench/results/figures/rank_genes_groups_leiden_marker_rankings_final.png)
 
-3. **Standardized Marker Gene Heatmap**
+2. **Standardized Marker Gene Heatmap**
 
    * **Analysis**: Extracts the top 3 marker genes for each cluster for cross-cell expression display. The dendrogram at the top reflects similarities between cell populations.
 
    * **Result**: Clear "expression blocks" along the diagonal prove the robustness of the clustering. Clusters 0, 1, and 2 are closely related on the dendrogram, likely representing similar progenitor states, while independent blocks like Cluster 3 represent significant fate deviations induced by perturbation.
 
-   \[\!\[View full image\](results/figures/Step5.3\_final\_marker\_heatmap\_standard.png)\](results/figures/Step5.3\_final\_marker\_heatmap\_standard.png)
+[![View full image](results/figures/Step5.3_final_marker_heatmap_standard.png)](results/figures/Step5.3_final_marker_heatmap_standard.png)
 
-4. **EZH2 (SET) Expression Audit Plot**
+3. **EZH2 (SET) Expression Audit Plot**
 
    * **Analysis**: A critical technical QC step. Compares EZH2 expression abundance between the Control group and the perturbation group labeled "SET."
 
    * **Result**: The image shows a precipitous drop in expression levels for the SET group compared to the Control. This validates the success of the perturbation—the CRISPR/model-simulated knockout produced the expected inhibitory effect at the transcript level.
 
-   \[\!\[View full image\](results/figures/step5.1\_publication\_audit\_ezh2.png)\](results/figures/step5.1\_publication\_audit\_ezh2.png)
+[![View full image](results/figures/step5.1_publication_audit_ezh2.png)](results/figures/step5.1_publication_audit_ezh2.png)
 
-5. **Experimental Perturbation Sample Distribution Plot**
+4. **Experimental Perturbation Sample Distribution Plot**
 
    * **Analysis**: This bar chart displays the top 30 perturbation groups by cell count.
 
    * **Result**: Sample distribution reflects typical experimental design. The Control group has the largest cell count (as a statistical baseline), while core groups like KLF1 and SET maintain counts in the hundreds to thousands. This ensures sufficient statistical power for deeper Gene Regulatory Network (GRN) analysis in Steps 6-7.
 
-   \[\!\[View full image\](results/figures/step5.5\_perturbation\_distribution.png)\](results/figures/step5.5\_perturbation\_distribution.png)
+[![View full image](results/figures/step5.5_perturbation_distribution.png)](results/figures/step5.5_perturbation_distribution.png)
 
 #### ---
 
@@ -139,7 +138,7 @@
 
    * **Conclusion**: Model predicts clear biological effects from KLF1 knockout.
 
-   \[\!\[View full image\](results/figures/step8\_1\_KLF1\_Impact\_Distribution.png)\](results/figures/step8\_1\_KLF1\_Impact\_Distribution.png)
+[![View full image](results/figures/step8_1_KLF1_Impact_Distribution.png)](results/figures/step8_1_KLF1_Impact_Distribution.png)
 
 2. **Panel 1: Waterfall Plot**
 
@@ -159,7 +158,7 @@
 
    * **Result**: This curve defines the penetrance of the perturbation. The slope and position show that at very low thresholds, nearly 100% of cells experience a shift; as the threshold increases, the curve rises slowly, quantifying the coverage of high-intensity effects. This provides statistical support for identifying KLF1 as a key lineage driver.
 
-   \[\!\[View full image\](results/figures/step8\_2\_KLF1\_Deep\_Analysis\_Report.png)\](results/figures/step8\_2\_KLF1\_Deep\_Analysis\_Report.png)
+[![View full image](results/figures/step8_2_KLF1_Deep_Analysis_Report.png)](results/figures/step8_2_KLF1_Deep_Analysis_Report.png)
 
 ---
 
@@ -187,7 +186,7 @@
 
    * **Result**: The curve shifts significantly to the left (below 1.0). Compared to KLF1, EZH2’s shift distribution may be wider, reflecting the diffuse nature of epigenetic factors on the transcriptome.
 
-   \[\!\[View full image\](results/figures/step10\_1\_EZH2\_Impact\_Distribution.png)\](results/figures/step10\_1\_EZH2\_Impact\_Distribution.png)
+[![View full image](results/figures/step10_1_EZH2_Impact_Distribution.png)](results/figures/step10_1_EZH2_Impact_Distribution.png)
 
 2. **Panel 1: Waterfall Plot**
 
@@ -201,7 +200,7 @@
 
    * **Result**: The curve reveals high penetrance for EZH2. At low shift thresholds, the proportion of affected cells rapidly climbs to 100%, statistically confirming the perturbation effect and providing evidence for prioritizing this gene in downstream functional experiments.
 
-   \[\!\[View full image\](results/figures/step10\_2\_EZH2\_Deep\_Analysis\_Report.png)\](results/figures/step10\_2\_EZH2\_Deep\_Analysis\_Report.png)
+[![View full image](results/figures/step10_2_EZH2_Deep_Analysis_Report.png)](results/figures/step10_2_EZH2_Deep_Analysis_Report.png)
 
 #### ---
 
@@ -229,7 +228,7 @@
 
    * **Result**: The Combo group displays an overwhelming response rate. After DKO, the response proportion increases dramatically, proving that combined perturbation effectively overcomes cell resistance seen in single-gene loss, causing state transitions in nearly 100% of the population.
 
-   \[\!\[View full image\](results/figures/step12\_4\_Optimized\_Response\_Rate.png)\](results/figures/step12\_4\_Optimized\_Response\_Rate.png)
+[![View full image](results/figures/step12_4_Optimized_Response_Rate.png)](results/figures/step12_4_Optimized_Response_Rate.png)
 
 2. **Synergy Comparison Report**
 
@@ -237,7 +236,7 @@
 
    * **Result**: Confirms significant synergy between KLF1 and EZH2. The transcriptomic shift from DKO is not a linear addition but an exponential enhancement. Biologically, this suggests EZH2 loss might lift certain chromatin restrictions, amplifying the chain reaction caused by KLF1 loss across the whole genome.
 
-   \[\!\[View full image\](results/figures/step12\_Synergy\_Comparison\_Report.png)\](results/figures/step12\_Synergy\_Comparison\_Report.png)
+[![View full image](results/figures/step12_Synergy_Comparison_Report.png)](results/figures/step12_Synergy_Comparison_Report.png)
 
 3. **Multi-Group Shift Comparison Distribution**
 
@@ -245,7 +244,7 @@
 
    * **Result**: The Combo group (purple curve) shows overwhelming shift depth. Its distribution center is drastically displaced compared to the KLF1 (cyan) and EZH2 (orange) single KO groups. This statistically visualizes the qualitative state shift produced by joint perturbation—the core evidence of KLF1 and EZH2 synergy.
 
-   \[\!\[View full image\](results/figures/step12.2\_Final\_Synergy\_Density\_Map.png)\](results/figures/step12.2\_Final\_Synergy\_Density\_Map.png)
+[![View full image](results/figures/step12.2_Final_Synergy_Density_Map.png)](results/figures/step12.2_Final_Synergy_Density_Map.png)
 
 4. **Stubborn Cell Response Audit**
 
@@ -259,13 +258,13 @@
 
    * **Conclusion**: For these stubborn cells, joint KLF1 and EZH2 perturbation creates an "anti-drift" effect, "pinning" them closer to the initial state rather than pushing them to a new one.
 
-   \[\!\[View full image\](results/figures/step12\_9\_Stubborn\_Cell\_Audit.png)\](results/figures/step12\_9\_Stubborn\_Cell\_Audit.png)
+[![View full image](results/figures/step12_9_Stubborn_Cell_Audit.png)](results/figures/step12_9_Stubborn_Cell_Audit.png)
 
 5. **Synergy Boxplot Comparison**
 
    * **Result**: KLF1 and EZH2 have a significant synergistic effect. Only the combination can effectively drive cell state shifts; individual treatments are largely ineffective.
 
-   \[\!\[View full image\](results/figures/step12.3\_Synergy\_Boxplot\_Comparison.png)\](results/figures/step12.3\_Synergy\_Boxplot\_Comparison.png)
+[![View full image](results/figures/step12.3_Synergy_Boxplot_Comparison.png)](results/figures/step12.3_Synergy_Boxplot_Comparison.png)
 
 ### ---
 
@@ -279,7 +278,7 @@
 
 * **Result**: The core biological effect of the KLF1+EZH2 combination is inducing cell cycle arrest. The mechanism involves powerful epigenetic regulation to inhibit the transition from a resting state (G0) to the division preparation phase (G1), achieving precise and significant proliferation inhibition.
 
-\[\!\[View full image\](results/figures/step12\_6\_functional\_enrichment\_wide.png)\](results/figures/step12\_6\_functional\_enrichment\_wide.png)
+[![View full image](results/figures/step12_6_functional_enrichment_wide.png)](results/figures/step12_6_functional_enrichment_wide.png)
 
 #### **Functional Enrichment Analysis Bubble Plot**
 
@@ -291,7 +290,7 @@
 
 * **Result**: The KLF1+EZH2 combination not only affects respiratory metabolism but also fundamentally "locks" the cell transition from G0 to G1 through highly significant cell cycle regulation.
 
-\[\!\[View full image\](results/figures/step12\_7\_Corrected\_Legends.png)\](results/figures/step12\_7\_Corrected\_Legends.png)
+[![View full image](results/figures/step12_7_Corrected_Legends.png)](results/figures/step12_7_Corrected_Legends.png)
 
 #### **Triple Functional Audit: Single KO vs. Combination**
 
@@ -309,7 +308,7 @@
 
 * **Result**: This chart demonstrates the complementary and synergistic effects of KLF1 and EZH2. The joint treatment creates an additive effect on cell cycle arrest and epigenetic inhibition that far exceeds single-drug intensity, achieving the most comprehensive cell state remodeling.
 
-\[\!\[View full image\](results/figures/step12\_8\_Triple\_Synergy\_Audit.png)\](results/figures/step12\_8\_Triple\_Synergy\_Audit.png)
+[![View full image](results/figures/step12_8_Triple_Synergy_Audit.png)](results/figures/step12_8_Triple_Synergy_Audit.png)
 
 ### ---
 
